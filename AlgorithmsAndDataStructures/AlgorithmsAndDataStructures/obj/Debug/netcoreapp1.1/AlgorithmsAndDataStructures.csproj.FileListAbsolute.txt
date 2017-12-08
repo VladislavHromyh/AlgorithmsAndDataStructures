@@ -1,0 +1,10 @@
+E:\C#Projects\AlgorithmsAndDataStructures\AlgorithmsAndDataStructures\bin\Debug\netcoreapp1.1\AlgorithmsAndDataStructures.deps.json
+E:\C#Projects\AlgorithmsAndDataStructures\AlgorithmsAndDataStructures\bin\Debug\netcoreapp1.1\AlgorithmsAndDataStructures.runtimeconfig.json
+E:\C#Projects\AlgorithmsAndDataStructures\AlgorithmsAndDataStructures\bin\Debug\netcoreapp1.1\AlgorithmsAndDataStructures.runtimeconfig.dev.json
+E:\C#Projects\AlgorithmsAndDataStructures\AlgorithmsAndDataStructures\bin\Debug\netcoreapp1.1\AlgorithmsAndDataStructures.dll
+E:\C#Projects\AlgorithmsAndDataStructures\AlgorithmsAndDataStructures\bin\Debug\netcoreapp1.1\AlgorithmsAndDataStructures.pdb
+E:\C#Projects\AlgorithmsAndDataStructures\AlgorithmsAndDataStructures\obj\Debug\netcoreapp1.1\AlgorithmsAndDataStructures.csprojResolveAssemblyReference.cache
+E:\C#Projects\AlgorithmsAndDataStructures\AlgorithmsAndDataStructures\obj\Debug\netcoreapp1.1\AlgorithmsAndDataStructures.csproj.CoreCompileInputs.cache
+E:\C#Projects\AlgorithmsAndDataStructures\AlgorithmsAndDataStructures\obj\Debug\netcoreapp1.1\AlgorithmsAndDataStructures.AssemblyInfo.cs
+E:\C#Projects\AlgorithmsAndDataStructures\AlgorithmsAndDataStructures\obj\Debug\netcoreapp1.1\AlgorithmsAndDataStructures.dll
+E:\C#Projects\AlgorithmsAndDataStructures\AlgorithmsAndDataStructures\obj\Debug\netcoreapp1.1\AlgorithmsAndDataStructures.pdb
