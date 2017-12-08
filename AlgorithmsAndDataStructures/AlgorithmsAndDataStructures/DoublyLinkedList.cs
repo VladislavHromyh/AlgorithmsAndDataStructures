@@ -106,5 +106,13 @@ namespace DataStructures  {
 				current = current.Next;
 			}
 		}
+
+		public  IEnumerable<T> BackEnumerator() {
+			Node<T> current = tail;
+			while (current != null) {
+				yield return current.Data;
+				current = current.Previous;
+			}
+		}
 	}
 }
