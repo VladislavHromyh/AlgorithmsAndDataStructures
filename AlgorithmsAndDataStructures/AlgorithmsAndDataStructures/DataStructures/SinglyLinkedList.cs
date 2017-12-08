@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace DataStructures  {
-	internal class CircularLinkedList<T> : IEnumerable<T> {
+	internal class SinglyLinkedList<T> : IEnumerable<T> {
 		private class Node<T> {
-			public T Data { get; set; }
+			public T Data { get; private set; }
 			public Node<T> Next { get; set; }
 
 			public Node(T data) {
@@ -17,7 +17,6 @@ namespace DataStructures  {
 		private Node<T> head;
 		private Node<T> tail;
 		private int count;
-		public int Count { get { return count; } private set { count = value; } }
 
 		public void Add(T data) {
 			Node<T> node = new Node<T>(data);
@@ -27,9 +26,8 @@ namespace DataStructures  {
 				tail.Next = node;
 			}
 			tail = node;
-			tail.Next = head;
 
-			Count++;
+			count++;
 		}
 
 		public void Remove(T data) {
@@ -45,7 +43,6 @@ namespace DataStructures  {
 				
 				if (previous == null) {
 					head = head.Next;
-					tail.Next = head;
 					if (head == null) {
 						tail = null;
 					}
@@ -54,33 +51,31 @@ namespace DataStructures  {
 					previous.Next = current.Next;
 					if (current == tail) {
 						tail = previous;
-						tail.Next = head;
 					}		
 				}
-				Count--;
+				count--;
 				return;
 			}
 		}
 
 		public void Clear() {
 			head = tail = null;
-			Count = 0;
+			count = 0;
 		}
 
 		public bool Contains(T data) {
 			bool contains = false;
 			Node<T> current = head;
 
-			int count = 0;
-			while (count < Count) {
+			while (current != null) {
 				if (!current.Data.Equals(data)) {
 					current = current.Next;
-					count++;
 					continue;
 				}
 				contains = true;
 				break;
 			}
+
 			return contains;
 		}
 
@@ -88,11 +83,10 @@ namespace DataStructures  {
 			Node<T> node = new Node<T>(data);
 			node.Next = head;
 			head = node;
-			if (Count == 0) {
+			if (count == 0) {
 				tail = head;
 			}
-			tail.Next = head;
-			Count++;
+			count++;
 		}
 
 		IEnumerator IEnumerable.GetEnumerator() {
@@ -101,12 +95,14 @@ namespace DataStructures  {
 
 		IEnumerator<T> IEnumerable<T>.GetEnumerator() {
 			Node<T> current = head;
-			int count = 0;
-			while (count < Count) {
+			while (current != null) {
 				yield return current.Data;
 				current = current.Next;
-				count++;
 			}
+		}
+
+		public bool IsEmpty() {
+			return count == 0;
 		}
 	}
 }
