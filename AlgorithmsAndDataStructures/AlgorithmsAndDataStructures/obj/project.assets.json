@@ -7045,11 +7045,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\C#Projects\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures.csproj",
+      "projectUniqueName": "E:\\C#Projects\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures.csproj",
       "projectName": "AlgorithmsAndDataStructures",
-      "projectPath": "E:\\C#Projects\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures.csproj",
+      "projectPath": "E:\\C#Projects\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures.csproj",
       "packagesPath": "C:\\Users\\Владислав\\.nuget\\packages\\",
-      "outputPath": "E:\\C#Projects\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures\\obj\\",
+      "outputPath": "E:\\C#Projects\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures\\AlgorithmsAndDataStructures\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Владислав\\AppData\\Roaming\\NuGet\\NuGet.Config",
