@@ -35,6 +35,11 @@ namespace DataStructures {
 			return nodeToDequeue.Data;
 		}
 
+		public void Clear() {
+			head = tail = null;
+			count = 0;
+		}
+
 		public T First() {
 			return head.Data;
 		}
