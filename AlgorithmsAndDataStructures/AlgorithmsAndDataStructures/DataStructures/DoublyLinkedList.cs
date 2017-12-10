@@ -67,19 +67,17 @@ namespace DataStructures  {
 		}
 
 		public bool Contains(T data) {
-			bool contains = false;
-			Node<T> current = head;
+			Node<T> currentNode = head;
 
-			while (current != null) {
-				if (!current.Data.Equals(data)) {
-					current = current.Next;
+			while (currentNode != null) {
+				if (!currentNode.Data.Equals(data)) {
+					currentNode = currentNode.Next;
 					continue;
 				}
-				contains = true;
-				break;
+				return true;
 			}
 
-			return contains;
+			return false;
 		}
 
 		public void AppendFirst(T data) {

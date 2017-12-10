@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DataStructures  {
 	internal class CircularLinkedList<T> : IEnumerable<T> {
@@ -67,20 +65,17 @@ namespace DataStructures  {
 		}
 
 		public bool Contains(T data) {
-			bool contains = false;
-			Node<T> current = head;
-
+			Node<T> currentNode = head;
 			int counter = 0;
 			while (counter < count) {
-				if (!current.Data.Equals(data)) {
-					current = current.Next;
+				if (!currentNode.Data.Equals(data)) {
+					currentNode = currentNode.Next;
 					counter++;
 					continue;
 				}
-				contains = true;
-				break;
+				return true;
 			}
-			return contains;
+			return false;
 		}
 
 		public void AppendFirst(T data) {
