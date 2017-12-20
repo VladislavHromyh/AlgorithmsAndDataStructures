@@ -54,6 +54,7 @@ namespace DataStructures {
 			if (node == null) {
 				return;
 			}
+
 			int compareResult = key.CompareTo(node.Key);
 			if (compareResult > 0) {
 				Remove(node.Right, key, node);
@@ -70,13 +71,20 @@ namespace DataStructures {
 						} else {
 							parent.Right = null;
 						}
+						node = null;
 					}
 				} else if (leftChild == null) {
-
+					node = rightChild;
+					node.Right = null;
 				} else if (rightChild == null) {
-
+					node = leftChild;
+					node.Left = null;
 				} else {
+					if (rightChild.Left == null) {
+						node = rightChild;
+					} else {
 
+					}
 				}
 			}
 		}
