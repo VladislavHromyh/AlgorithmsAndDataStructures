@@ -50,7 +50,6 @@ namespace DataStructures {
 
 		private void Insert(TKey key, TValue value, BSTNode<TKey, TValue> parent) {
 			if (parent == null) {
-				Console.WriteLine("Add root");
 				root = new BSTNode<TKey, TValue>(key, value, parent);
 				return;
 			}
@@ -58,14 +57,12 @@ namespace DataStructures {
 			int compareResult = key.CompareTo(parent.Key);
 			if (compareResult > 0) {
 				if (parent.Right == null) {
-					Console.WriteLine("add to right");
 					parent.Right = new BSTNode<TKey, TValue>(key, value, parent);
 				} else {
 					Insert(key, value, parent.Right);
 				}		
 			} else if (compareResult < 0) {
 				if (parent.Left == null) {
-					Console.WriteLine("add to left");
 					parent.Left = new BSTNode<TKey, TValue>(key, value, parent);
 				} else {
 					Insert(key, value, parent.Left);
