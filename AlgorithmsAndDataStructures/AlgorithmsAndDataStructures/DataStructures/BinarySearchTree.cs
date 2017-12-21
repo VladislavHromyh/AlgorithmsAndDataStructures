@@ -6,9 +6,9 @@ namespace DataStructures {
 		public class BSTNode<TKey, TValue> {
 			public BSTNode<TKey, TValue> Left;
 			public BSTNode<TKey, TValue> Right;
-			public TKey Key { get; private set; }
-			public TValue Value { get; private set; }
-			public BSTNode<TKey, TValue> Parent { get; private set; }
+			public TKey Key { get; set; }
+			public TValue Value { get; set; }
+			public BSTNode<TKey, TValue> Parent { get; set; }
 
 			public BSTNode(TKey key, TValue value, BSTNode<TKey, TValue> parent) {
 				Key = key;
@@ -31,7 +31,7 @@ namespace DataStructures {
 			}
 		}
 
-		private BSTNode<TKey, TValue> root;
+		public BSTNode<TKey, TValue> root;
 
 		private BSTNode<TKey, TValue> Find(TKey key, BSTNode<TKey, TValue> parent) {
 			if (parent == null) {
@@ -105,15 +105,22 @@ namespace DataStructures {
 					if (rightChild.Left == null) {
 						node = rightChild;
 					} else {
-						BSTNode<TKey, TValue> mostleftChild = rightChild.Left;
+						BSTNode<TKey, TValue> mostleftChild = rightChild;
 						while (true) {
-							if (mostleftChild.Left != null) {
+							if (mostleftChild.Left != null) {					
 								mostleftChild = mostleftChild.Left;
 							} else {
 								break;
 							}
 						}
-						node = mostleftChild;
+						if (node.Parent.Right == node) {
+							node.Parent.Right = mostleftChild;
+						} else if (node.Parent.Left == node) {
+							node.Parent.Left = mostleftChild;
+						}
+						node.Left.Parent = mostleftChild;
+						mostleftChild.Right = node.Right;
+						node = null;
 					}
 				}
 			}
