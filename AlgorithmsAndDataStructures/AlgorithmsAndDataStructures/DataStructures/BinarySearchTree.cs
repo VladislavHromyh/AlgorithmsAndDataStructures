@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace DataStructures {
 	internal class BinarySearchTree<TKey, TValue> where TKey : IComparable<TKey> {
@@ -132,6 +131,45 @@ namespace DataStructures {
 
 		public void Remove(TKey key) {
 			Remove(key, root);
+		}
+
+		private void InfixTraverse(BSTNode<TKey, TValue> node, Action<BSTNode<TKey, TValue>> action) {
+			if (node == null) {
+				return;
+			}
+			InfixTraverse(node.Left, action);
+			action(node);
+			InfixTraverse(node.Right, action);
+		}
+
+		public void InfixTraverse(Action<BSTNode<TKey, TValue>> action) {
+			InfixTraverse(root, action);
+		}
+
+		public void PrefixTraverse(Action<BSTNode<TKey, TValue>> action) {
+			PrefixTraverse(root, action);
+		}
+
+		private void PrefixTraverse(BSTNode<TKey, TValue> node, Action<BSTNode<TKey, TValue>> action) {
+			if (node == null) {
+				return;
+			}
+			action(node);
+			PrefixTraverse(node.Left, action);
+			PrefixTraverse(node.Right, action);
+		}
+
+		public void PostfixTraverse(Action<BSTNode<TKey, TValue>> action) {
+			PostfixTraverse(root, action);
+		}
+
+		private void PostfixTraverse(BSTNode<TKey, TValue> node, Action<BSTNode<TKey, TValue>> action) {
+			if (node == null) {
+				return;
+			}
+			PostfixTraverse(node.Left, action);
+			PostfixTraverse(node.Right, action);
+			action(node);
 		}
 	}
 }
