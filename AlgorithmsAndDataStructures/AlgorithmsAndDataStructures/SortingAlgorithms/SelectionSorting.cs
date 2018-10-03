@@ -1,6 +1,6 @@
 ﻿namespace SortingAlgorithms {
 
-	internal static class SelectionnSorting {
+	internal static class SelectionSorting {
 		public static void Sort(int[] elements) {
 			int sortedElementsCount = 0;
 
